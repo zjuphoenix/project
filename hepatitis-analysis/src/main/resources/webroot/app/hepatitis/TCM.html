@@ -1,0 +1,141 @@
+<div class="table-wrapper products-table section">
+    <div class="row-fluid head">
+        <div class="span12">
+            <h4>病人中医证候</h4>
+        </div>
+    </div>
+
+    <div class="row-fluid filter-block">
+        <div class="pull-right">
+            <input type="text" class="search" ng-model="query"/>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="span3">
+                    病人id
+                </th>
+                <th class="span3">
+                    <span class="line"></span>乏力
+                </th>
+                <th class="span3">
+                    <span class="line"></span>纳差
+                </th>
+                <th class="span3">
+                    <span class="line"></span>眼黄
+                </th>
+                <th class="span3">
+                    <span class="line"></span>尿黄
+                </th>
+                <th class="span3">
+                    <span class="line"></span>腹痛
+                </th>
+                <th class="span3">
+                    <span class="line"></span>腹胀
+                </th>
+                <th class="span3">
+                    <span class="line"></span>呕血、黑便
+                </th>
+                <th class="span3">
+                    <span class="line"></span>皮肤瘙痒
+                </th>
+                <th class="span3">
+                    <span class="line"></span>肝病面容
+                </th>
+                <th class="span3">
+                    <span class="line"></span>肝掌
+                </th>
+                <th class="span3">
+                    <span class="line"></span>皮肤巩膜黄染
+                </th>
+                <th class="span3">
+                    <span class="line"></span>胆囊Murphy征
+                </th>
+                <th class="span3">
+                    <span class="line"></span>腹部膨隆
+                </th>
+                <th class="span3">
+                    <span class="line"></span>腹壁曲张静脉
+                </th>
+                <th class="span3">
+                    <span class="line"></span>腹部包块
+                </th>
+                <th class="span3">
+                    <span class="line"></span>腹部压痛或反跳痛
+                </th>
+                <th class="span3">
+                    <span class="line"></span>移动性浊音
+                </th>
+                <th class="span3">
+                    <span class="line"></span>操作
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- row -->
+            <tr ng-repeat="examination in examinations|filter:query">
+                <td>
+                    <a href="#" class="name">{{examination.patientId}}</a>
+                </td>
+                <td>
+                    {{examination.weakness}}
+                </td>
+                <td>
+                    {{examination.inappetence}}
+                </td>
+                <td>
+                    {{examination.yelloweye}}
+                </td>
+                <td>
+                    {{examination.yellowurine}}
+                </td>
+                <td>
+                    {{examination.abdominalpain}}
+                </td>
+                <td>
+                    {{examination.abdominaldistension}}
+                </td>
+                <td>
+                    {{examination.hematemesisandmelena}}
+                </td>
+                <td>
+                    {{examination.pruritus}}
+                </td>
+                <td>
+                    {{examination.hepaticface}}
+                </td>
+                <td>
+                    {{examination.liverpalms}}
+                </td>
+                <td>
+                    {{examination.skinsclerajaundice}}
+                </td>
+                <td>
+                    {{examination.gallbladderMurphysign}}
+                </td>
+                <td>
+                    {{examination.abdominalprotuberance}}
+                </td>
+                <td>
+                    {{examination.abdominalwallvaricosis}}
+                </td>
+                <td>
+                    {{examination.abdominalmass}}
+                </td>
+                <td>
+                    {{examination.abdominaltendernessorbounce}}
+                </td>
+                <td>
+                    {{examination.shiftingdullness}}
+                </td>
+                <td>
+                    <a href="#">编辑</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- end products table -->

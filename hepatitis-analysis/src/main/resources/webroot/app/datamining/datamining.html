@@ -1,0 +1,32 @@
+<div id="pad-wrapper" class="form-page">
+    <div class="row-fluid form-wrapper">
+        <!-- left column -->
+        <div class="span8 column">
+            <form>
+                <div class="field-box">
+                    <label>数据集总数:</label>
+                    <input class="span8 inline-input" type="text" readonly="readonly" ng-model="sum"/>
+                </div>
+                <div class="field-box">
+                    <label>训练数据数:</label>
+                    <input class="span8" type="text" ng-model="train"  ng-change="compute()"/>
+                </div>
+                <div class="field-box">
+                    <label>测试数据数:</label>
+                    <input class="span8 inline-input" type="text" readonly="readonly" value="{{test}}" />
+                </div>
+                <div class="field-box">
+                    <label>选择算法:</label>
+                    <div class="ui-select">
+                        <select>
+                            <option selected="">SVC</option>
+                            <option>神经网络</option>
+                            <option>决策树</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary" ng-click="train()">训练</button>
+            </form>
+        </div>
+    </div>
+</div>

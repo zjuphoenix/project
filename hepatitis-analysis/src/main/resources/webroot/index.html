@@ -1,0 +1,299 @@
+<!doctype html>
+<html ng-app="hepatitis">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>hepatitis</title>
+
+        <!-- bootstrap -->
+        <link href="assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="assets/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="assets/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+        <!-- libraries -->
+        <link href="assets/css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+
+        <!-- global styles -->
+        <link rel="stylesheet" type="text/css" href="assets/css/layout.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/elements.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/icons.css" />
+
+        <!-- this page specific styles -->
+        <link rel="stylesheet" href="assets/css/compiled/signin.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="assets/css/compiled/index.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="assets/css/compiled/tables.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="assets/css/compiled/form-wizard.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="assets/ng-grid-2.0.12/ng-grid.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="assets/css/compiled/grids.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="assets/css/compiled/form-showcase.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="assets/css/compiled/web-app-icons.css" type="text/css" media="screen" />
+
+        <!-- open sans font -->
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />-->
+
+        <!-- lato font -->
+        <!--<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />-->
+
+        <!--<script src="assets/js/jquery.min.js"></script>-->
+        <script src="assets/js/jquery-1.9.1.js"></script>
+
+        <!-- scripts -->
+        <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery-ui-1.10.2.custom.min.js"></script>
+        <!-- knob -->
+        <script src="assets/js/jquery.knob.js"></script>
+        <!-- flot charts -->
+        <script src="assets/js/jquery.flot.js"></script>
+        <script src="assets/js/jquery.flot.stack.js"></script>
+        <script src="assets/js/jquery.flot.resize.js"></script>
+        <script src="assets/js/theme.js"></script>
+        <script src="assets/js/select2.min.js"></script>
+
+        <script src="assets/js/angular.min.js"></script>
+        <script src="assets/js/angular-ui-router.min.js"></script>
+        <script src="assets/js/angular-storage.js"></script>
+        <script src="assets/js/angular-animate.min.js"></script>
+        <script src="assets/ng-grid-2.0.12/ng-grid.debug.js"></script>
+
+    </head>
+    <body ng-controller="MainCtrl as main" ng-cloak>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- navbar -->
+                <div class="navbar navbar-inverse">
+                    <div class="navbar-inner">
+                        <button type="button" class="btn btn-navbar visible-phone" id="menu-toggler">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="brand" href="index.html"><img src="assets/img/logo.png" /></a>
+
+                        <ul class="nav pull-right">
+                            <li class="hidden-phone">
+                                <input class="search" type="text" />
+                            </li>
+                            <li class="notification-dropdown hidden-phone">
+                                <a href="#" class="trigger">
+                                    <i class="icon-warning-sign"></i>
+                                    <span class="count">8</span>
+                                </a>
+                                <div class="pop-dialog">
+                                    <div class="pointer right">
+                                        <div class="arrow"></div>
+                                        <div class="arrow_border"></div>
+                                    </div>
+                                    <div class="body">
+                                        <a href="#" class="close-icon"><i class="icon-remove-sign"></i></a>
+                                        <div class="notifications">
+                                            <h3>You have 6 new notifications</h3>
+                                            <a href="#" class="item">
+                                                <i class="icon-signin"></i> New user registration
+                                                <span class="time"><i class="icon-time"></i> 13 min.</span>
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="icon-signin"></i> New user registration
+                                                <span class="time"><i class="icon-time"></i> 18 min.</span>
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="icon-envelope-alt"></i> New message from Alejandra
+                                                <span class="time"><i class="icon-time"></i> 28 min.</span>
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="icon-signin"></i> New user registration
+                                                <span class="time"><i class="icon-time"></i> 49 min.</span>
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="icon-download-alt"></i> New order placed
+                                                <span class="time"><i class="icon-time"></i> 1 day.</span>
+                                            </a>
+                                            <div class="footer">
+                                                <a href="#" class="logout">View all notifications</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="notification-dropdown hidden-phone">
+                                <a href="#" class="trigger">
+                                    <i class="icon-envelope-alt"></i>
+                                </a>
+                                <div class="pop-dialog">
+                                    <div class="pointer right">
+                                        <div class="arrow"></div>
+                                        <div class="arrow_border"></div>
+                                    </div>
+                                    <div class="body">
+                                        <a href="#" class="close-icon"><i class="icon-remove-sign"></i></a>
+                                        <div class="messages">
+                                            <a href="#" class="item">
+                                                <img src="assets/img/contact-img.png" class="display" />
+                                                <div class="name">Alejandra Galván</div>
+                                                <div class="msg">
+                                                    There are many variations of available, but the majority have suffered alterations.
+                                                </div>
+                                                <span class="time"><i class="icon-time"></i> 13 min.</span>
+                                            </a>
+                                            <a href="#" class="item">
+                                                <img src="assets/img/contact-img2.png" class="display" />
+                                                <div class="name">Alejandra Galván</div>
+                                                <div class="msg">
+                                                    There are many variations of available, have suffered alterations.
+                                                </div>
+                                                <span class="time"><i class="icon-time"></i> 26 min.</span>
+                                            </a>
+                                            <a href="#" class="item last">
+                                                <img src="assets/img/contact-img.png" class="display" />
+                                                <div class="name">Alejandra Galván</div>
+                                                <div class="msg">
+                                                    There are many variations of available, but the majority have suffered alterations.
+                                                </div>
+                                                <span class="time"><i class="icon-time"></i> 48 min.</span>
+                                            </a>
+                                            <div class="footer">
+                                                <a href="#" class="logout">View all messages</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li ng-if="main.currentUser" class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i
+                                        class="icon-user"></i><b>{{main.currentUser.username}}</b> <i class="caret"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li ng-if="main.isPermitted('manage_user')">
+                                        <a tabindex="1" href="#/users">User</a>
+                                    </li>
+                                    <li ng-if="main.isPermitted('manage_user') && main.isPermitted('operate')" class="divider"></li>
+                                    <li ng-if="main.isPermitted('operate')">
+                                        <a tabindex="2" href="#/upload">Upload</a>
+                                    </li>
+                                    <li ng-if="main.isPermitted('operate')" class="divider"></li>
+                                    <li>
+                                        <a tabindex="3" href="#" ng-click="main.logout()">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="settings hidden-phone">
+                                <a href="personal-info.html" role="button">
+                                    <i class="icon-cog"></i>
+                                </a>
+                            </li>
+                            <li class="settings hidden-phone">
+                                <a href="signin.html" role="button">
+                                    <i class="icon-share-alt"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end navbar -->
+
+                <!-- sidebar -->
+                <div id="sidebar-nav">
+                    <ul id="dashboard-menu">
+                        <li class="active">
+                            <div class="pointer">
+                                <div class="arrow"></div>
+                                <div class="arrow_border"></div>
+                            </div>
+                            <a href="index.html">
+                                <i class="icon-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li ng-if="main.currentUser && main.isPermitted('manage_user')">
+                            <a href="#/users">
+                                <!--<i class="icon-signal"></i>-->
+                                <i class="icon-group"></i>
+                                <span>用户管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/patient">
+                                <i class="icon-picture"></i>
+                                <span>肝炎患者管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">
+                                <i class="icon-edit"></i>
+                                <span>肝炎类型群体</span>
+                                <i class="icon-chevron-down"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="#/hepatitisB/info">甲肝</a></li>
+                                <li><a href="#/hepatitisB/TCM">乙肝</a></li>
+                                <li><a href="#/hepatitisB/liverfunction">丙肝</a></li>
+                                <li><a href="#/hepatitisB/HBV">丁肝</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#/examinations">
+                                <i class="icon-calendar-empty"></i>
+                                <span>肝炎检查数据</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle ui-elements" href="#">
+                                <i class="icon-code-fork"></i>
+                                <span>数据挖掘</span>
+                                <i class="icon-chevron-down"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="#/datamining">数据训练</a></li>
+                                <li><a href="#/datamining/analyse">肝炎类型分析</a></li>
+                            </ul>
+                        </li>
+                        <!--<li>
+                            <a href="#/datamining">
+                                <i class="icon-th-large"></i>
+                                <span>数据挖掘2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="personal-info.html">
+                                <i class="icon-cog"></i>
+                                <span>My Info</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">
+                                <i class="icon-share-alt"></i>
+                                <span>Extras</span>
+                                <i class="icon-chevron-down"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="code-editor.html">Code editor</a></li>
+                                <li><a href="grids.html">Grids</a></li>
+                                <li><a href="signin.html">Sign in</a></li>
+                                <li><a href="signup.html">Sign up</a></li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                </div>
+                <!-- end sidebar -->
+
+
+                <!-- main container -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div id="pad-wrapper">
+                            <div ui-view></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="app/app.js"></script>
+        <script src="app/hepatitis/examination.js"></script>
+        <script src="app/datamining/datamining.js"></script>
+        <script src="app/datamining/analyse.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,41 @@
+<div class="row-fluid">
+    <div class="span12">
+        <h2>添加用户</h2>
+        <div class="step-content">
+            <div class="step-pane active" id="step1">
+                <div class="row-fluid form-wrapper">
+                    <div class="span8">
+                        <form novalidate name="AddNewForm" id="add-new-form" method="post" action="">
+                            <div class="field-box">
+                                <label>Username:</label>
+                                <input class="span8" type="text" ng-model="user.username" required />
+                            </div>
+                            <div class="field-box">
+                                <label>Password:</label>
+                                <input class="span8" type="password" ng-model="user.password" required />
+                            </div>
+                            <div class="field-box">
+                                <label>Confirm Password:</label>
+                                <input class="span8" type="password" ng-model="user.confirm_password" required />
+                            </div>
+                            <div class="field-box">
+                                <label>First name:</label>
+                                <input class="span8" type="text" ng-model="user.first_name" required />
+                            </div>
+                            <div class="field-box">
+                                <label>Last name:</label>
+                                <input class="span8" type="text" ng-model="user.last_name" required />
+                            </div>
+                            <div class="field-box">
+                                <label>Address:</label>
+                                <input class="span8" type="text" ng-model="user.address" />
+                            </div>
+                            <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(user)" id="add-new-btn" ng-click="addUser(user)">Save!</button>
+                            <a href="#/users" class="btn">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

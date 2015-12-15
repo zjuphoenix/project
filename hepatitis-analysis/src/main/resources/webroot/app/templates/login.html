@@ -1,0 +1,23 @@
+<div class="row-fluid login-wrapper">
+    <a href="index.html">
+        <img class="logo" src="assets/img/logo-white.png" />
+    </a>
+    <div class="span4 box">
+        <div class="content-wrap">
+            <h6>Log in</h6>
+            <div ng-if="login.message" class="col-xs-12">
+                <div class="alert alert-danger">{{login.message}}</div>
+            </div>
+            <form class="col-xs-12" ng-submit="login.submit(login.user)">
+                <input id="username" name="username" class="span12" type="text" ng-model="login.user.username" placeholder="Enter username"/>
+                <input id="password" name="password" class="span12" type="password" ng-model="login.user.password" placeholder="Enter password"/>
+                <a href="#" class="forgot">Forgot password?</a>
+                <div class="remember">
+                    <input id="remember-me" type="checkbox" />
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <button type="submit" class="btn-glow primary login">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

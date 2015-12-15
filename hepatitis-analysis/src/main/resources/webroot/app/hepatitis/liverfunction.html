@@ -1,0 +1,99 @@
+<div class="table-wrapper products-table section">
+    <div class="row-fluid head">
+        <div class="span12">
+            <h4>肝功能检查</h4>
+        </div>
+    </div>
+
+    <div class="row-fluid filter-block">
+        <div class="pull-right">
+            <input type="text" class="search" ng-model="query"/>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="span3">
+                    病人id
+                </th>
+                <th class="span3">
+                    <span class="line"></span>谷丙转氨酶
+                </th>
+                <th class="span3">
+                    <span class="line"></span>谷草转氨酶
+                </th>
+                <th class="span3">
+                    <span class="line"></span>总胆红素
+                </th>
+                <th class="span3">
+                    <span class="line"></span>直接胆红素
+                </th>
+                <th class="span3">
+                    <span class="line"></span>白蛋白
+                </th>
+                <th class="span3">
+                    <span class="line"></span>球蛋白
+                </th>
+                <th class="span3">
+                    <span class="line"></span>总蛋白
+                </th>
+                <th class="span3">
+                    <span class="line"></span>γ －谷氨酰转肽酶
+                </th>
+                <th class="span3">
+                    <span class="line"></span>碱性磷酸酶
+                </th>
+                <th class="span3">
+                    <span class="line"></span>甲胎蛋白
+                </th>
+                <th class="span3">
+                    <span class="line"></span>操作
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- row -->
+            <tr ng-repeat="examination in examinations|filter:query">
+                <td>
+                    <a href="#" class="name">{{examination.patientId}}</a>
+                </td>
+                <td>
+                    {{examination.GPT}}
+                </td>
+                <td>
+                    {{examination.GOT}}
+                </td>
+                <td>
+                    {{examination.TB}}
+                </td>
+                <td>
+                    {{examination.DB}}
+                </td>
+                <td>
+                    {{examination.albumin}}
+                </td>
+                <td>
+                    {{examination.globulin}}
+                </td>
+                <td>
+                    {{examination.TP}}
+                </td>
+                <td>
+                    {{examination.GGT}}
+                </td>
+                <td>
+                    {{examination.AP}}
+                </td>
+                <td>
+                    {{examination.AFP}}
+                </td>
+                <td>
+                    <a href="#">编辑</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- end products table -->

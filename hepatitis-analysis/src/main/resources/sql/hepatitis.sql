@@ -1,0 +1,57 @@
+CREATE TABLE examination (
+    id INT COMMENT '体检id',
+    patientId INT COMMENT '病人id',
+    gender VARCHAR(4) COMMENT '性别',
+    age INT COMMENT '年龄',
+    occupation VARCHAR(16) COMMENT '职业',
+    city VARCHAR(40) COMMENT '病人所在城市',
+    hepatitisBFamilyHistory VARCHAR(16) COMMENT '乙肝家族史',
+    liverCancerFamilyHistory VARCHAR(16) COMMENT '肝癌家族史',
+    contactHistory VARCHAR(16) COMMENT '个人接触史',
+    alcoholismHistory VARCHAR(8) COMMENT '酗酒史',
+    hepatitisBPastHistory VARCHAR(8) COMMENT '乙肝既往史',
+    weakness VARCHAR(8) COMMENT '乏力',
+    inappetence VARCHAR(8) COMMENT '纳差',
+    yelloweye VARCHAR(8) COMMENT '眼黄',
+    yellowurine VARCHAR(8) COMMENT '尿黄',
+    abdominalpain VARCHAR(8) COMMENT '腹痛',
+    abdominaldistension VARCHAR(8) COMMENT '腹胀',
+    hematemesisandmelena VARCHAR(8) COMMENT '呕血、黑便',
+    pruritus VARCHAR(8) COMMENT '皮肤瘙痒',
+    hepaticface VARCHAR(8) COMMENT '肝病面容',
+    liverpalms VARCHAR(8) COMMENT '肝掌',
+    skinsclerajaundice VARCHAR(8) COMMENT '皮肤巩膜黄染',
+    gallbladderMurphysign VARCHAR(8) COMMENT '胆囊Murphy征',
+    abdominalprotuberance VARCHAR(8) COMMENT '腹部膨隆',
+    abdominalwallvaricosis VARCHAR(8) COMMENT '腹壁曲张静脉',
+    abdominalmass VARCHAR(8) COMMENT '腹部包块',
+    abdominaltendernessorbounce VARCHAR(8) COMMENT '腹部压痛或反跳痛',
+    shiftingdullness VARCHAR(8) COMMENT '移动性浊音',
+    GPT FLOAT COMMENT '谷丙转氨酶',
+    GOT FLOAT COMMENT '谷草转氨酶',
+    TB FLOAT COMMENT '总胆红素',
+    DB FLOAT COMMENT '直接胆红素',
+    albumin FLOAT COMMENT '白蛋白',
+    globulin FLOAT COMMENT '球蛋白',
+    TP FLOAT COMMENT '总蛋白',
+    GGT FLOAT COMMENT 'γ －谷氨酰转肽酶',
+    AP FLOAT COMMENT '碱性磷酸酶',
+    AFP VARCHAR(8) COMMENT '甲胎蛋白',
+    HBVDNA FLOAT COMMENT 'HBV DNA',
+    HBsAg FLOAT COMMENT '乙肝表面抗原',
+    HBsAb FLOAT COMMENT '乙肝表面抗体',
+    HBeAg FLOAT COMMENT '乙肝e抗原',
+    HBeAb FLOAT COMMENT '乙肝e抗体',
+    HBcAb FLOAT COMMENT '乙肝核心抗体',
+    hepatitisType VARCHAR(40) COMMENT '',
+    PRIMARY KEY (id)
+)ENGINE=innodb DEFAULT CHARSET=utf8;
+INSERT INTO examination VALUES(1,1,'男',47,'建筑工人','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'病毒性乙肝');
+INSERT INTO examination VALUES(2,2,'女',47,'教师','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'病毒性乙肝');
+INSERT INTO examination VALUES(3,3,'男',47,'专业技术人员','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'正常');
+INSERT INTO examination VALUES(4,4,'男',47,'国家机关负责人','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'病毒性甲肝');
+INSERT INTO examination VALUES(5,5,'男',47,'农业生产人员','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'病毒性乙肝');
+INSERT INTO examination VALUES(6,6,'女',47,'公务员','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'病毒性乙肝');
+INSERT INTO examination VALUES(7,7,'男',47,'林业生产人员','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'病毒性丙肝');
+INSERT INTO examination VALUES(8,8,'男',47,'渔业生产人员','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'病毒性乙肝');
+INSERT INTO examination VALUES(9,9,'男',47,'服务业人员','杭州','父亲','无','无','无','无','中度','中度','中度','中度','有','有','有','有','有','有','有','不详','无','无','不详','无','不详',19.0,24.0,13.35,4.70,48.40,31.0,79.40,15.0,60.0,'不详',1.0,0.7,10.2,0.7,0.3,1.2,'病毒性乙肝');

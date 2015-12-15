@@ -1,0 +1,64 @@
+<div class="table-wrapper products-table section">
+    <div class="row-fluid head">
+        <div class="span12">
+            <h4>病人列表</h4>
+        </div>
+    </div>
+
+    <div class="row-fluid filter-block">
+        <div class="pull-right">
+            <input type="text" class="search" ng-model="query"/>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="span3">
+                    病人id
+                </th>
+                <th class="span3">
+                    <span class="line"></span>病人姓名
+                </th>
+                <th class="span3">
+                    <span class="line"></span>性别
+                </th>
+                <th class="span3">
+                    <span class="line"></span>出生日期
+                </th>
+                <th class="span3">
+                    <span class="line"></span>地址
+                </th>
+                <th class="span3">
+                    <span class="line"></span>操作
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- row -->
+            <tr ng-repeat="patient in patients|filter:query">
+                <td>
+                    <a href="#" class="name">{{patient.id}}</a>
+                </td>
+                <td>
+                    {{patient.name}}
+                </td>
+                <td>
+                    {{patient.gender}}
+                </td>
+                <td>
+                    {{patient.birth}}
+                </td>
+                <td>
+                    {{patient.address}}
+                </td>
+                <td>
+                    <a href="#">编辑</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- end products table -->

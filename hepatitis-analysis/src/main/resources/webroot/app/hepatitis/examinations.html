@@ -1,0 +1,68 @@
+<div class="table-wrapper products-table section">
+    <div class="row-fluid head">
+        <div class="span12">
+            <h4>检查列表</h4>
+        </div>
+    </div>
+
+    <div class="row-fluid filter-block">
+        <div class="pull-right">
+            <input type="text" class="search" ng-model="query"/>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="span3">
+                    检查编号
+                </th>
+                <th class="span3">
+                    <span class="line"></span>性别
+                </th>
+                <th class="span3">
+                    <span class="line"></span>年龄
+                </th>
+                <th class="span3">
+                    <span class="line"></span>职业
+                </th>
+                <th class="span3">
+                    <span class="line"></span>所在城市
+                </th>
+                <th class="span3">
+                    <span class="line"></span>操作
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- row -->
+            <tr ng-repeat="examination in examinations|filter:query">
+                <td>
+                    {{examination.id}}
+                </td>
+                <td>
+                    {{examination.gender}}
+                </td>
+                <td>
+                    {{examination.age}}
+                </td>
+                <td>
+                    {{examination.occupation}}
+                </td>
+                <td>
+                    {{examination.city}}
+                </td>
+                <td>
+                    <a href="#/examination/{{examination.id}}">详情</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!--<div class="gridStyle" ng-grid="gridOptions">
+        </div>-->
+        <!--<div ui-view="info"></div>
+        <div ui-view="TCM"></div>
+        <div ui-view="liverfunction"></div>
+        <div ui-view="HBV"></div>-->
+    </div>
+</div>

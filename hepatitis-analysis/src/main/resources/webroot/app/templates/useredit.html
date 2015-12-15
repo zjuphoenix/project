@@ -1,0 +1,34 @@
+<div class="row-fluid">
+    <div class="span12">
+        <h2>编辑用户</h2>
+        <div class="step-content">
+            <div class="step-pane active" id="step1">
+                <div class="row-fluid form-wrapper">
+                    <div class="span8">
+                        <form novalidate name="EditForm" id="edit-form" method="post" action="">
+                            <div class="field-box">
+                                <label>Username:</label>
+                                <input class="span8" disabled="disabled" type="text" ng-model="user.USERNAME" value="{{user.USERNAME}}" required />
+                            </div>
+                            <div class="field-box">
+                                <label>First name:</label>
+                                <input class="span8" type="text" ng-model="user.FIRST_NAME" value="{{user.FIRST_NAME}}" required />
+                            </div>
+                            <div class="field-box">
+                                <label>Last name:</label>
+                                <input class="span8" type="text" ng-model="user.LAST_NAME" value="{{user.LAST_NAME}}" required />
+                            </div>
+                            <div class="field-box">
+                                <label>Address:</label>
+                                <input class="span8" type="text" ng-model="user.ADDRESS" value="{{user.ADDRESS}}" />
+                            </div>
+                            <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(user)" id="add-new-btn" ng-click="update(user)">Update <span class="glyphicon glyphicon-floppy-disk"></span></button>
+                            <button class="btn btn-danger" ng-click="delete(user)">Delete <span class="glyphicon glyphicon-trash"></span></button>
+                            <a href="#/users" class="btn">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
